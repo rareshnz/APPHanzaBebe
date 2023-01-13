@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APPHanzaBebe.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="#1C375C"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" HorizontalOptions="Center">
+                <Image
+                    Margin="0,30"
+                    Aspect="AspectFit"
+                    HeightRequest="100"
+                    Source="dotnet_bot.svg"
+                    WidthRequest="80" />
+            </StackLayout>
+
+            <Frame
+                Grid.Row="1"
+                Margin="0,0,0,-40"
+                BorderColor="#1C375C"
+                CornerRadius="50"
+                HasShadow="True"
+                HeightRequest="700">
+                <Grid
+                    Padding="20,50,20,0"
+                    HorizontalOptions="FillAndExpand"
+                    RowSpacing="20"
+                    VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        FontAttributes="Bold"
+                        FontSize="24"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Bine ati venit!"
+                        TextColor="#1C375C" />
+                    <Label
+                        Grid.Row="1"
+                        Margin="0,-15,0,0"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Intrati in cont"
+                        TextColor="#1C375C" />
+                    <Entry
+                        Grid.Row="2"
+                        Margin="0,20,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="Nume Utilizator"
+                        Text="{Binding UserName}"
+                        VerticalOptions="FillAndExpand" />
+                    <Entry
+                        Grid.Row="3"
+                        HorizontalOptions="FillAndExpand"
+                        IsPassword="True"
+                        Placeholder="Parola"
+                        Text="{Binding UserPassword}"
+                        VerticalOptions="FillAndExpand" />
+                    <Button
+                        Grid.Row="4"
+                        BackgroundColor="#1C375C"
+                        Command="{Binding LoginBtn}"
+                        CornerRadius="20"
+                        Text="Intra in cont" />
+
+                    <Button
+                        Grid.Row="5"
+                        BackgroundColor="#1C375C"
+                        Command="{Binding RegisterBtn}"
+                        CornerRadius="20"
+                        Text="Inregistreaza-te folosind Email" />
+                
+                    <Label
+                        Grid.Row="7"
+                        FontAttributes="Bold"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Am uitat paorla" />
+                    <Label
+                        Grid.Row="8"
+                        Margin="0,-10,0,0"
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Nu ai cont?Inregistreaza-te aici!" />
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+
+
+</ContentPage>
