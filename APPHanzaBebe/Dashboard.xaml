@@ -8,12 +8,8 @@
             Text="Bine ati venit in contul dumneavoastra"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button
-                        Grid.Row="4"
-                        BackgroundColor="#1C375C"
-                        Command="{Binding }"
-                        CornerRadius="20"
-                        Text="Intra in cont" />
+        <Button x:Name="MyButton" Text="Go to Second Page" />
+
     </VerticalStackLayout>
     
 </ContentPage>

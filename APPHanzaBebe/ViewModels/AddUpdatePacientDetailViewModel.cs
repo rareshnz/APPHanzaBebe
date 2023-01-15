@@ -2,6 +2,7 @@
 using Microsoft.Toolkit.Mvvm.Input;
 using APPHanzaBebe.Models;
 using APPHanzaBebe.Services;
+using APPHanzaBebe.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace APPHanzaBebe.ViewModels
         {
             _pacientService = pacientService;
         }
+           
 
         [ICommand]
         public async void AddUpdatePacient()

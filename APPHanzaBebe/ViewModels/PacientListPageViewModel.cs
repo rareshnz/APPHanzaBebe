@@ -49,16 +49,17 @@ namespace APPHanzaBebe.ViewModels
         {
             await AppShell.Current.GoToAsync(nameof(AddUpdatePacientDetail));
         }
-
-
-        [ICommand]
+       
+                [ICommand]
         public async void DisplayAction(PacientModel pacientModel)
         {
             var response = await AppShell.Current.DisplayActionSheet("Select Option", "OK", null, "Edit", "Delete");
             if (response == "Edit")
             {
-                var navParam = new Dictionary<string, object>();
-                navParam.Add("PacientDetail", pacientModel);
+                var navParam = new Dictionary<string, object>
+                {
+                    { "PacientDetail", pacientModel }
+                };
                 await AppShell.Current.GoToAsync(nameof(AddUpdatePacientDetail), navParam);
             }
             else if (response == "Delete")
