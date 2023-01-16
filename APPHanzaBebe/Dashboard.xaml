@@ -8,7 +8,7 @@
             Text="Bine ati venit in contul dumneavoastra"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button x:Name="MyButton" Text="Go to Second Page" />
+        <Button x:Name="MyButton" Text="Gestiune Pacienti" />
 
     </VerticalStackLayout>
     

@@ -56,7 +56,9 @@ namespace APPHanzaBebe.ViewModels
                 var content = await auth.GetFreshAuthAsync();
                 var serializedContent = JsonConvert.SerializeObject(content);
                 Preferences.Set("FreshFirebaseToken", serializedContent);
-                await this._navigation.PushAsync(new Dashboard());
+                await this._navigation.PushAsync(new AppShell());
+                var appshell = new AppShell();
+                Application.Current.MainPage = appshell;
             }
             catch (Exception ex)
             {

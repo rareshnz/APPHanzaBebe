@@ -12,6 +12,7 @@ namespace APPHanzaBebe
         private IPacientService pacientService;
         public Dashboard()
         {
+             
             InitializeComponent();
            
             pacientService = new PacientService();

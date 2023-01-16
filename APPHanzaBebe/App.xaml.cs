@@ -1,4 +1,6 @@
-﻿namespace APPHanzaBebe;
+﻿using APPHanzaBebe;
+
+namespace APPHanzaBebe;
 
 public partial class App : Application
 {
@@ -7,5 +9,7 @@ public partial class App : Application
 		InitializeComponent();
 
 		MainPage = new NavigationPage(new MainPage());
-	}
+        
+    }
+    
 }

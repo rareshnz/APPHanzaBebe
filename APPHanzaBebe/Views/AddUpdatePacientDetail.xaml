@@ -13,14 +13,14 @@
     </ContentPage.Resources>
     <StackLayout Margin="10" Spacing="15">
         <VerticalStackLayout>
-            <Label Text="First Name"  />
+            <Label Text="Nume"  />
             <Entry Text="{Binding PacientDetail.FirstName}" Placeholder="First Name" />
             <BoxView HeightRequest="0.8" Color="Gray" />
         </VerticalStackLayout>
 
 
         <VerticalStackLayout>
-            <Label Text="Last Name" />
+            <Label Text="Prenume" />
             <Entry  Text="{Binding PacientDetail.LastName}" Placeholder="Last Name" />
             <BoxView HeightRequest="0.8" Color="Gray" />
         </VerticalStackLayout>
@@ -29,6 +29,12 @@
         <VerticalStackLayout>
             <Label Text="Email" />
             <Entry Text="{Binding PacientDetail.Email}" Placeholder="Email" />
+            <BoxView HeightRequest="0.8" Color="Gray" />
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout>
+            <Label Text="Data programare" />
+            <Entry Text="{Binding PacientDetail.AppointmentDate}" Placeholder="AppointmentDate" />
             <BoxView HeightRequest="0.8" Color="Gray" />
         </VerticalStackLayout>
 

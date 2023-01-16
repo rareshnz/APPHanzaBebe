@@ -39,6 +39,7 @@
                                 <Label Text="{Binding LastName}" FontSize="18" FontAttributes="Bold" />
                             </HorizontalStackLayout>
                             <Label Text="{Binding Email}" />
+                            <Label Text="{Binding AppointmentDate}" FontSize="18" FontAttributes="Bold"/>
                         </StackLayout>
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewModels:PacientListPageViewModel}},Path=DisplayActionCommand}"

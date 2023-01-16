@@ -71,5 +71,23 @@ namespace APPHanzaBebe.ViewModels
                 }
             }
         }
+
+        public override bool Equals(object obj)
+        {
+            return obj is PacientListPageViewModel model &&
+                   EqualityComparer<ObservableCollection<PacientModel>>.Default.Equals(Pacients, model.Pacients) &&
+                   EqualityComparer<IPacientService>.Default.Equals(_pacientService, model._pacientService) &&
+                   EqualityComparer<RelayCommand>.Default.Equals(getPacientListCommand, model.getPacientListCommand) &&
+                   EqualityComparer<IRelayCommand>.Default.Equals(GetPacientListCommand, model.GetPacientListCommand) &&
+                   EqualityComparer<RelayCommand>.Default.Equals(addUpdatePacientCommand, model.addUpdatePacientCommand) &&
+                   EqualityComparer<IRelayCommand>.Default.Equals(AddUpdatePacientCommand, model.AddUpdatePacientCommand) &&
+                   EqualityComparer<RelayCommand<PacientModel>>.Default.Equals(displayActionCommand, model.displayActionCommand) &&
+                   EqualityComparer<IRelayCommand<PacientModel>>.Default.Equals(DisplayActionCommand, model.DisplayActionCommand);
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

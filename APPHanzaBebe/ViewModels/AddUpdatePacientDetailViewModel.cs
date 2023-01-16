@@ -40,6 +40,7 @@ namespace APPHanzaBebe.ViewModels
                     Email = PacientDetail.Email,
                     FirstName = PacientDetail.FirstName,
                     LastName = PacientDetail.LastName,
+                    AppointmentDate = PacientDetail.AppointmentDate,
                 });
             }
 
